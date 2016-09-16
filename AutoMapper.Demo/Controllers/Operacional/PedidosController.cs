@@ -22,20 +22,20 @@ namespace AutoMapper.Demo.Controllers.Operacional
 
             //var pedidos = db.Pedidos.Include("LinhaPedido").ToList();
 
-            var pedidos = db.Pedidos.ToList();         
+
 
             // Exemplo - Automapeamento de Campos Nomes diferentes.
 
-            Mapper.CreateMap<Pedido, PedidoDTO>()
-                .ForMember(d => d.NomeCliente, o => o.MapFrom(p=>p.Cliente.PegaNome()))
-                .ForMember(d => d.Total, o => o.MapFrom(p => p.TotalPedido()))   
-                .ForMember(d=>d.Entregar, o=>o.ResolveUsing<ResolvedorBooleano>())
-                //.ForMember(d => d.LinhaPedido, o => o.MapFrom(p => p.LinhaPedido))
-                .ForMember(d => d.NrPedido, o => o.MapFrom(p=>p.NumeroPedido));
+            //Mapper.CreateMap<Pedido, PedidoDTO>()
+            //    .ForMember(d => d.NomeCliente, o => o.MapFrom(p=>p.Cliente.PegaNome()))
+            //    .ForMember(d => d.Total, o => o.MapFrom(p => p.TotalPedido()))   
+            //    .ForMember(d=>d.Entregar, o=>o.ResolveUsing<ResolvedorBooleano>())
+            //    //.ForMember(d => d.LinhaPedido, o => o.MapFrom(p => p.LinhaPedido))
+            //    .ForMember(d => d.NrPedido, o => o.MapFrom(p=>p.NumeroPedido));
 
-            Mapper.CreateMap<ItensPedido, ItensPedidoDTO>();
+            //Mapper.CreateMap<ItensPedido, ItensPedidoDTO>();
 
-          
+            var pedidos = db.Pedidos.ToList();
             var model = Mapper.Map<IEnumerable<Pedido>, IEnumerable<PedidoDTO>>(pedidos);
 
 
