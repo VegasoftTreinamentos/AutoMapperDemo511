@@ -12,7 +12,11 @@ namespace AutoMapper.Demo.AutoMapperConfig
     {
         public ItensPedidoProfile()
         {
-            Mapper.CreateMap<ItensPedido, ItensPedidoDTO>();
+            Mapper.CreateMap<ItensPedido, ItensPedidoDTO>()
+                 //.ForMember(dest => dest.Cliente, opt => opt.Ignore())
+                 //.ForMember(dest => dest.Total, opt => opt.Ignore());
+                 .ForMember(d => d.Cliente, o => o.MapFrom(p => p.Pedido.Cliente.PegaNome()))
+                .ForMember(d => d.Total, o => o.MapFrom(p => p.PrecoTotal()));
         }
     }
 }

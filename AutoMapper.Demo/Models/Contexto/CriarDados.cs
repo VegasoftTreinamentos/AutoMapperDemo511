@@ -47,7 +47,7 @@ namespace AutoMapper.Demo.Models.Contexto
                         Cliente = context.Clientes.FirstOrDefault(x=>x.Nome.Contains("André")),
                         NumeroPedido = "000.002",
                         DataCompra = new DateTime(2015, 6, 28),
-                        Entregar = false,
+                        Entregar = true,
                         InternalId = new Guid(),
                         LinhaPedido = new List<ItensPedido>
                         {

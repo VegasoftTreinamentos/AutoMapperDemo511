@@ -13,7 +13,7 @@ namespace AutoMapper.Demo.AutoMapperConfig
             {
                 cfg.AddProfile<ClienteProfile>();
                 cfg.AddProfile<PedidoProfile>();
-               // cfg.AddProfile<ItensPedidoProfile>();
+                cfg.AddProfile<ItensPedidoProfile>();
             });
 
             // Validador do Mapping
