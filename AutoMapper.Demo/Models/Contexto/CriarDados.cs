@@ -27,13 +27,13 @@ namespace AutoMapper.Demo.Models.Contexto
 
                var listaClientes = new List<Cliente>
                 {
-                    new Cliente {Nome = "Donisetti", Sobrenome = "Ferreira Cosma"},
-                    new Cliente {Nome = "Luiz Fernando", Sobrenome = "Pientka"},
-                    new Cliente {Nome = "Fabiana", Sobrenome = "de Cosma Fernandes"},
-                    new Cliente {Nome = "Solange", Sobrenome = "Ferreira Cosma"},
-                    new Cliente {Nome = "Soleide", Sobrenome = "Ferreira Cosma"},
-                    new Cliente {Nome = "Valdir", Sobrenome = "Antonio da Silva"},
-                    new Cliente {Nome = "André", Sobrenome = "Bineli",Bio = "Analista de sistemas"}
+                    new Cliente {Nome = "João", Sobrenome = "dos Santos"},
+                    new Cliente {Nome = "Fernando", Sobrenome = "Oliveira"},
+                    new Cliente {Nome = "Fabiana", Sobrenome = "da Silva"},
+                    new Cliente {Nome = "Solange", Sobrenome = "Faria"},
+                    new Cliente {Nome = "Pedro", Sobrenome = "Martins"},
+                    new Cliente {Nome = "Antonio", Sobrenome = "Alves"},
+                    new Cliente {Nome = "André", Sobrenome = "Siqueira",Bio = "Profissional de Saúde"}
                 };
 
                 listaClientes.ForEach(i => context.Clientes.AddOrUpdate(i));
