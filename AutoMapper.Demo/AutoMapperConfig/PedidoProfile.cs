@@ -13,10 +13,10 @@ namespace AutoMapper.Demo.AutoMapperConfig
     {
         public PedidoProfile()
         {
-            Mapper.CreateMap<Pedido, PedidoDTO>()
+            this.CreateMap<Pedido, PedidoDTO>()
                 .ForMember(d => d.NomeCliente, o => o.MapFrom(p => p.Cliente.PegaNome()))
                 .ForMember(d => d.Total, o => o.MapFrom(p => p.TotalPedido()))
-                .ForMember(d => d.Entregar, o => o.ResolveUsing<ResolvedorBooleano>())
+                //.ForMember(d => d.Entregar, o => o.ResolveUsing<ResolvedorBooleano>())
                 //.ForMember(d => d.LinhaPedido, o => o.MapFrom(p => p.LinhaPedido))
                 .ForMember(d => d.NrPedido, o => o.MapFrom(p => p.NumeroPedido));
         }

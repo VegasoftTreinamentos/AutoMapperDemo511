@@ -12,7 +12,7 @@ namespace AutoMapper.Demo.AutoMapperConfig
     {
         public ClienteProfile()
         {
-            AutoMapper.Mapper.CreateMap<Cliente, ClienteDTO>()
+            this.CreateMap<Cliente, ClienteDTO>()
                  .ForMember(destino => destino.Bio, o => o.NullSubstitute("Não foi informado."))
                 .ForMember(destino => destino.NomeCompleto, o => o.MapFrom(p => p.PegaNome()));
         }       

@@ -19,8 +19,6 @@ namespace AutoMapper.Demo.Controllers.Operacional
         // GET: Vendas
         public ActionResult Index()
         {
-
-
             //Mapper.CreateMap<ItensPedido, ItensPedidoDTO>()
             //    .ForMember(d => d.Cliente, o => o.MapFrom(p => p.Pedido.Cliente.PegaNome()))
             //    .ForMember(d => d.Total, o => o.MapFrom(p => p.PrecoTotal()));
